@@ -1,0 +1,30 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #333;
+	color: white;
+	padding: 10px 20px;
+}
+
+.navbarLogo img {
+	height: 40px; /* Ajusta el tamaño del logo */
+}
+
+.navbarLinks {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+}
+
+.navbarLinks a {
+	text-decoration: none;
+}
+.navbarLinks span {
+	color: white;
+}
+	
+.navbarCart a {
+	text-decoration: none;
+	color: white;
+}
