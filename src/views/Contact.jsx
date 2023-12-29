@@ -1,7 +1,7 @@
-import React from "react";
 import {useForm} from "react-hook-form";
-import "../styles/contacto.css"; // Importa tu archivo de estilos
-import { Button } from "@mui/material";
+import {Button} from "@mui/material";
+
+import "../styles/contacto.css";
 
 const Contacto = () => {
 	const {register, handleSubmit} = useForm();
@@ -18,7 +18,7 @@ const Contacto = () => {
 				<input type="email" placeholder="Ingresá tu e-mail" {...register("email")} />
 				<input type="phone" placeholder="Ingresá tu teléfono" {...register("telefono")} />
 
-				<Button  variant="contained" className="enviar" type="submit">
+				<Button variant="contained" className="enviar" type="submit">
 					Enviar
 				</Button>
 			</form>
