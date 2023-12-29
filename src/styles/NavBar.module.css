@@ -7,8 +7,12 @@
 	padding: 10px 20px;
 }
 
-.navbarLogo img {
-	height: 40px; /* Ajusta el tamaño del logo */
+.navbarLogo h4 {
+	text-decoration: none;
+	color: white;
+}
+.navbarLogo a {
+	text-decoration: none;
 }
 
 .navbarLinks {
@@ -23,7 +27,7 @@
 .navbarLinks span {
 	color: white;
 }
-	
+
 .navbarCart a {
 	text-decoration: none;
 	color: white;

@@ -1,0 +1,13 @@
+
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 4rem; 
+  color: #FF0000; 
+  text-align: center;
+}

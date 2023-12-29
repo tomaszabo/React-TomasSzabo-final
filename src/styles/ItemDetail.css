@@ -1,0 +1,55 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; /* Esto ajusta la altura al 100% del viewport */
+	margin: 0;
+}
+
+.producto-detalle {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 80%;
+	max-width: 1400px; /* Puedes ajustar el ancho máximo según tu preferencia */
+	padding: 20px;
+}
+
+.producto-detalle img {
+	max-width: 230px;
+	margin-right: 30px;
+}
+
+.producto-detalle div {
+	flex: 1;
+}
+
+.producto-detalle h3 {
+	font-size: 24px;
+	margin: 0;
+}
+
+.producto-detalle .descripcion {
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.producto-detalle .categoria {
+	font-style: italic;
+	margin-bottom: 5px;
+}
+
+.producto-detalle .precio {
+	font-weight: bold;
+	font-size: 20px;
+	color: #ff6600;
+	margin-bottom: 15px;
+}
+
+.producto-detalle .item-count {
+	display: flex;
+	padding: 5px;
+}
+
+
+

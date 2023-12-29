@@ -1,11 +1,17 @@
+import React, {useContext} from "react";
+import {Link} from "react-router-dom";
+import {CartContext} from "../context/CartContext";
 import {ShoppingCart} from "@mui/icons-material";
 import {Badge} from "@mui/material";
 
-export const CartWidget = ({count}) => {
+export const CartWidget = ({}) => {
+	const {cantidadEnCarrito} = useContext(CartContext);
 	return (
-		<Badge color="primary" badgeContent={count}>
-			<ShoppingCart />
-		</Badge>
+		<Link to="/Carrito">
+			<Badge color="primary" badgeContent={cantidadEnCarrito()}>
+				<ShoppingCart />
+			</Badge>
+		</Link>
 	);
 };
 

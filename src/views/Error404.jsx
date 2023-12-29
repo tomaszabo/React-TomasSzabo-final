@@ -1,12 +1,12 @@
-import { Container } from "@mui/material";
+import {Container} from "@mui/material";
+import "../styles/error404.css"
 
-
-const Error404=() => {
+const Error404 = () => {
 	return (
 		<Container>
-			<h1>Dónde estoy?</h1>
+			<h1>Pagina No encontrada </h1>
 		</Container>
 	);
-}
+};
 
 export default Error404;

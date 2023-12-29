@@ -1,4 +1,4 @@
-import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import CartWidget from "./Cartwidget";
 
 import styles from "../styles/NavBar.module.css";
@@ -7,26 +7,35 @@ function NavBar() {
 	return (
 		<nav className={styles.navbar}>
 			<div className={styles.navbarLogo}>
-				<h5>ToMarket</h5>
+				<Link to="/">
+					<h4>ToMarket</h4>
+				</Link>
 			</div>
 			<ul className={styles.navbarLinks}>
-				<NavLink to="/">
+				<Link to="/">
 					<span>Home</span>
-				</NavLink>
-				<NavLink to="/">
-					<span>Productos</span>
-				</NavLink>
-				<NavLink to="/" className={styles.dd}>
-					<span>Servicios</span>
-				</NavLink>
-				<NavLink to="/contact">
+				</Link>
+				<Link to="/category/Mujeres">
+					<span>Mujeres</span>
+				</Link>
+				<Link to="/category/Hombres">
+					<span>Hombres</span>
+				</Link>
+				<Link to="/category/Electronica">
+					<span>Electronica</span>
+				</Link>
+				<Link to="/category/Joyería">
+					<span>Joyería</span>
+				</Link>
+
+				<Link to="/contact">
 					<span>Contacto</span>
-				</NavLink>
+				</Link>
 			</ul>
 			<div className={styles.navbarCart}>
-				<NavLink to="/">
+				<Link to="/">
 					<CartWidget count={3} />
-				</NavLink>
+				</Link>
 			</div>
 		</nav>
 	);

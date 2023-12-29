@@ -1,19 +1,19 @@
-import {useEffect, useState} from "react";
 import ItemList from "./ItemList";
 import {Container} from "@mui/material";
 import Spinner from "./Spinners";
-import useFetch from "../hook/useFetch";
-
-//"https://fakestoreapi.com/products"
+import useFirebaseData from "../hook/useFirebaseData";
+import {useParams} from "react-router-dom";
+import { Maximize } from "@mui/icons-material";
 
 const ItemListContainer = () => {
-	
-	const{loading, data} = useFetch("https://fakestoreapi.com/products")
+	const category = useParams().category;
+	const itemId = null;
+	const {data, loading} = useFirebaseData("products", category, itemId);
 
 	return (
-		<Container>
+		<Container >
+			{category ? <h1>{category}</h1> : <h1>Productos</h1>}
 			{loading && <Spinner />}
-			<h1>Productos</h1>
 			<ItemList products={data} />
 		</Container>
 	);
