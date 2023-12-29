@@ -1,7 +1,8 @@
-import React, {useContext, useState} from "react";
+import {useContext, useState} from "react";
 import ItemCount from "./ItemCount";
 import {CartContext} from "../context/CartContext";
-import "../styles/itemDetail.css"; // Importa tu archivo de estilos
+
+import "../styles/itemDetail.css";
 
 const ItemDetail = ({item}) => {
 	const {carrito, agregarAlCarrito} = useContext(CartContext);
@@ -18,11 +19,11 @@ const ItemDetail = ({item}) => {
 	};
 
 	return (
-		<div className="container">
+		<div className="container-details">
 			<div className="producto-detalle">
 				<img src={item.image} alt={item.title} />
 				<div>
-					<h3 className="">{item.title}</h3>
+					<h3>{item.title}</h3>
 					<p className="descripcion">{item.description}</p>
 					<p className="categoria">Categoría: {item.category}</p>
 					<p className="precio">${item.price}</p>

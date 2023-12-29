@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
+import {Button} from "@mui/material";
+
 import styles from "../styles/item.module.css";
-import { Button } from "@mui/material";
 
 const Item = ({product}) => {
 	return (

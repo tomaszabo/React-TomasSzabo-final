@@ -1,4 +1,4 @@
-.container {
+.container-details {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -45,11 +45,5 @@
 	color: #ff6600;
 	margin-bottom: 15px;
 }
-
-.producto-detalle .item-count {
-	display: flex;
-	padding: 5px;
-}
-
 
 

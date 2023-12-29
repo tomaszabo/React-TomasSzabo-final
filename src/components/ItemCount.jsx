@@ -1,6 +1,6 @@
-import React from "react";
-import "../styles/ItemCount.css"; // Importa tu archivo de estilos
 import {Button, ButtonGroup} from "@mui/material";
+
+import "../styles/ItemCount.css";
 
 const ItemCount = ({cantidad, handleRestar, handleSumar, handleAgregar}) => {
 	return (

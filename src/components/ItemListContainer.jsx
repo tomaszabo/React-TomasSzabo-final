@@ -1,9 +1,8 @@
 import ItemList from "./ItemList";
-import {Container} from "@mui/material";
 import Spinner from "./Spinners";
 import useFirebaseData from "../hook/useFirebaseData";
 import {useParams} from "react-router-dom";
-import { Maximize } from "@mui/icons-material";
+import {Container} from "@mui/material";
 
 const ItemListContainer = () => {
 	const category = useParams().category;
@@ -11,7 +10,7 @@ const ItemListContainer = () => {
 	const {data, loading} = useFirebaseData("products", category, itemId);
 
 	return (
-		<Container >
+		<Container>
 			{category ? <h1>{category}</h1> : <h1>Productos</h1>}
 			{loading && <Spinner />}
 			<ItemList products={data} />

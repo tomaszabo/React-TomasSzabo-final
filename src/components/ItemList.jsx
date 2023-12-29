@@ -1,4 +1,5 @@
 import Item from "./Item";
+
 import styles from "../styles/itemList.module.css";
 
 const ItemList = ({products}) => {

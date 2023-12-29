@@ -1,7 +1,9 @@
-import React, {useContext} from "react";
+import {useContext} from "react";
 import {CartContext} from "../context/CartContext";
-import "../styles/carrito.css"; // Importa tu archivo de estilos
-import { Button } from "@mui/material";
+import {Button} from "@mui/material";
+import {Link} from "react-router-dom";
+
+import "../styles/carrito.css";
 
 const Carrito = () => {
 	const {carrito, precioTotal, vaciarCarrito} = useContext(CartContext);
@@ -11,8 +13,8 @@ const Carrito = () => {
 	};
 
 	return (
-		<div className="container">
-			<h1 className="main-title">Carrito</h1>
+		<div className="container-carrito">
+			<h1 className="carrito-title">Carrito</h1>
 
 			{carrito.map((prod) => (
 				<div className="cart-item" key={prod.id}>
@@ -23,6 +25,7 @@ const Carrito = () => {
 							<p className="cart-item-price">Precio unit: ${prod.price}</p>
 							<p>Precio total: ${prod.price * prod.cantidad}</p>
 							<p>Cant: {prod.cantidad}</p>
+							
 						</div>
 					</div>
 				</div>
@@ -31,10 +34,15 @@ const Carrito = () => {
 			{carrito.length > 0 ? (
 				<div className="cart-summary">
 					<h2>Precio total: ${precioTotal()}</h2>
-					<Button onClick={handleVaciar} variant="contained">Vaciar</Button>
+					<Button onClick={handleVaciar} variant="outlined">
+						Vaciar
+					</Button>
+					<Link to="/checkout">
+						<Button variant="contained">Finalizar compra</Button>
+					</Link>
 				</div>
 			) : (
-				<h2>El carrito está vacío :(</h2>
+				<h2>El carrito está vacío</h2>
 			)}
 		</div>
 	);
